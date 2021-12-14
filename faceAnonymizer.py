@@ -67,7 +67,7 @@ class AppDemo(QWidget):
         blurFaces(getFaces(imagePath), imagePath)
         pictureName = imagePath.split("/", imagePath.count("/"))[imagePath.count("/")]
         print(pictureName)
-        pixmap = QPixmap("C:/Users/Hippolyte/OneDrive/python/faceAnonymizer/blurredFaces/" + pictureName.split(".")[0] + "Anonymized." + pictureName.split(".")[1])
+        pixmap = QPixmap("" + pictureName.split(".")[0] + "Anonymized." + pictureName.split(".")[1])
         self.photoViewer.setPixmap(pixmap)
 
 
@@ -113,7 +113,7 @@ def blurFaces(faces, imagePath):
     pictureName = imagePath.split("/", imagePath.count("/"))[imagePath.count("/")]
 
     try:
-        imageVidee.save("C:/Users/Hippolyte/OneDrive/python/faceAnonymizer/blurredFaces/" + pictureName.split(".")[0] + "Anonymized." + pictureName.split(".")[1])
+        imageVidee.save("" + pictureName.split(".")[0] + "Anonymized." + pictureName.split(".")[1])
     except:
         pass
 
